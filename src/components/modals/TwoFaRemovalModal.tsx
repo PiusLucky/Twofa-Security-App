@@ -4,9 +4,9 @@ import MainButton from "@/components/common/MainButton";
 import makeApiCallService from "@/service/apiService";
 
 export function TwofaRemovalModal({
-  rerenderPrivacyComp,
+  handleRefresh,
 }: {
-  rerenderPrivacyComp: () => void;
+  handleRefresh: () => void;
 }) {
   const [open, setOpen] = useState(false);
   const [activateLoading, setActivateLoading] = useState(false);
@@ -24,7 +24,7 @@ export function TwofaRemovalModal({
 
       setActivateLoading(false);
       toggleOpenModal();
-      rerenderPrivacyComp();
+      handleRefresh();
     } catch (err) {
       setActivateLoading(false);
     }

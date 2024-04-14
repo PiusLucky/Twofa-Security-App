@@ -123,9 +123,9 @@ function DashboardContentSection() {
       <div className="flex justify-center items-center gap-[18px]">
         <div>
           {twofa?.status ? (
-            <TwofaRemovalModal rerenderPrivacyComp={handleRefresh} />
+            <TwofaRemovalModal handleRefresh={handleRefresh} />
           ) : (
-            <TwofaSetupModal rerenderPrivacyComp={handleRefresh} />
+            <TwofaSetupModal handleRefresh={handleRefresh} />
           )}
         </div>
 

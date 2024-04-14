@@ -9,9 +9,9 @@ import makeApiCallService from "@/service/apiService";
 import QRCode from "react-qr-code";
 
 export function TwofaSetupModal({
-  rerenderPrivacyComp,
+  handleRefresh,
 }: {
-  rerenderPrivacyComp: () => void;
+  handleRefresh: () => void;
 }) {
   const [loading, setLoading] = useState(true);
   const [copy, setCopy] = useState(false);
@@ -66,7 +66,7 @@ export function TwofaSetupModal({
       });
 
       setActivateLoading(false);
-      rerenderPrivacyComp();
+      handleRefresh();
     } catch (err) {
       setActivateLoading(false);
     }

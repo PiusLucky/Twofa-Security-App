@@ -39,8 +39,8 @@ const config = {
         customGray: "#A6A6A6"
       },
       borderRadius: {
-        large: "1.875rem"
-      }
+        large: "1.875rem",
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],

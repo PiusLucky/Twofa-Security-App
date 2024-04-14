@@ -23,25 +23,9 @@ import {
 } from "@/types";
 import { LoginTwoFaModal } from "../modals/LoginTwoFaModal";
 import { Toaster } from "../ui/toaster";
+import { LoginUserInputValidation } from "@/lib/validations";
 
-const FormSchema = z.object({
-  email: z
-    .string()
-    .email({
-      message: "Enter a valid email",
-    })
-    .min(2, {
-      message: "email must be at least 2 characters.",
-    }),
-  password: z
-    .string()
-    .min(8, {
-      message: "Password must be at least 8 characters.",
-    })
-    .max(25, {
-      message: "Password must be at most 25 characters.",
-    }),
-});
+const FormSchema = LoginUserInputValidation
 
 function LoginForm() {
   const router = useRouter();

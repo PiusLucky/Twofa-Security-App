@@ -91,5 +91,5 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export function ellipsify(str: string, length: number = 15): string {
-  return str.length > length ? str.slice(0, length) + "..." : str;
+  return str.length > length ? str.slice(0, length) + "***" : str;
 }
