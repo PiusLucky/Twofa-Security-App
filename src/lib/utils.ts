@@ -62,7 +62,7 @@ export const error_response = (
 
 export const validateToken = async (
   token: string | null
-): Promise<IValidatedToken | void | null> => {
+): Promise<any> => {
   if (!token) {
     throw new Error("Invalid Token");
   }

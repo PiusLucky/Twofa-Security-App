@@ -2,7 +2,6 @@ import {
   bulkCreateRecoveryCodes,
   getAllUserRecoveryCodes,
   getRecoveryCodeForSignin,
-  processRecoveryCodeForSignin,
 } from "@/lib/actions/recovery-codes";
 import { error_response, success_response, validateToken } from "@/lib/utils";
 

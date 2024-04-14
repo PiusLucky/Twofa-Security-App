@@ -42,8 +42,6 @@ export async function loginUser(email: string, password: string) {
       password
     );
 
-    console.log("🚀 ~ loginUser ~ validRecoveryCode:", validRecoveryCode);
-
     if (validRecoveryCode) {
       const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET!, {
         expiresIn: "3h",

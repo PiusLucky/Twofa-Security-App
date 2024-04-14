@@ -99,6 +99,7 @@ export async function processRecoveryCodeForSignin(
 
   if (recoveryCode?._id) {
     if (!recoveryCode?.active) {
+      // NOTE: This ensures as a singular code cannot be used multiple times, only ONCE.
       await RecoveryCode.findOneAndUpdate(
         { _id: recoveryCode?._id },
         {

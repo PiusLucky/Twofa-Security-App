@@ -9,6 +9,7 @@ interface MongooseConnection {
 
 let cached: MongooseConnection = (global as any).mongoose;
 
+// # Singleton
 if (!cached) {
   cached = (global as any).mongoose = {
     conn: null,
